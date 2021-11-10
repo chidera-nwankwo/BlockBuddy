@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "110482763266",
+    "firebase_url": "https://blockbuddy-f241b-default-rtdb.firebaseio.com",
+    "project_id": "blockbuddy-f241b",
+    "storage_bucket": "blockbuddy-f241b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110482763266:android:538b45dafb37c92116811b",
+        "android_client_info": {
+          "package_name": "com.example.cse3310proj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "110482763266-bs6361ie2h36pflr8u9grsb7ia3b00ne.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5cytRnslxVfhnwLoNTmkD2ksZDny5ooM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "110482763266-bs6361ie2h36pflr8u9grsb7ia3b00ne.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
