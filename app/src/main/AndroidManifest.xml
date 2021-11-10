@@ -3,6 +3,7 @@
     package="com.example.cse3310proj">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CSE3310proj">
+        <activity
+            android:name=".OpeningPage"
+            android:exported="false" />
         <activity
             android:name=".Login"
             android:exported="true" />
