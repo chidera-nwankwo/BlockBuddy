@@ -43,6 +43,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         editTextPassword = (EditText) findViewById(R.id.Password);
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
+
+        mAuth = FirebaseAuth.getInstance();
     }
 
     public void onClick(View v) {
@@ -71,11 +73,12 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             editTextEmail.setError("Enter a valid Email");
+            editTextEmail.requestFocus();
             return;
         }
 
         if(password.isEmpty()) {
-            editTextPassword.setError("Password is requierd");
+            editTextPassword.setError("Password is required");
             editTextPassword.requestFocus();
         }
 
@@ -92,10 +95,13 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {
                     //go to profile
+                    startActivity(new Intent(Login.this, Profile.class));
                 }
                 else {
                     Toast.makeText(Login.this, "Failed to Login", Toast.LENGTH_SHORT).show();
                 }
+                
+                progressBar.setVisibility(View.GONE);
             }
         });
     }
