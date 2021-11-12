@@ -118,14 +118,13 @@
         android:id="@+id/proft_loss"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:text="@sample/coin_info.json/change_since_purchase/change[0]"
         android:textColor="@sample/change_colors"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/current_value_title" />
+        app:layout_constraintBottom_toTopOf="@+id/profit_loss"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/profit_loss"
@@ -134,8 +133,8 @@
         android:layout_marginEnd="10dp"
         android:text="Unrealized Profit/Loss"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/proft_loss" />
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/current_value"
