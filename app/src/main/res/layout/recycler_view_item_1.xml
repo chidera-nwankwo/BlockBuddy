@@ -72,7 +72,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:textAlignment="viewEnd"
-          tools:text="@sample/coin_info.json/date_aquired/date" />
+          tools:text="@sample/coin_info.json/date_acquired/date[0]" />
 
     </LinearLayout>
 
