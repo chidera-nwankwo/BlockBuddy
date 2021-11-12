@@ -24,6 +24,29 @@
     {"coin_name": "XRP"}
   ],
 
+  "coin_abb": [
+    {"abb": "ALGO"},
+    {"abb": "AVAX"},
+    {"abb": "BNB"},
+    {"abb": "BUSD"},
+    {"abb": "BTC"},
+    {"abb": "BCH"},
+    {"abb": "ADA"},
+    {"abb": "LINK"},
+    {"abb": "DOGE"},
+    {"abb": "ETH"},
+    {"abb": "LTC"},
+    {"abb": "DOT"},
+    {"abb": "SHIB"},
+    {"abb": "SOL"},
+    {"abb": "LUNA"},
+    {"abb": "USDT"},
+    {"abb": "UNI"},
+    {"abb": "USDC"},
+    {"abb": "WBTC"},
+    {"abb": "XRP"}
+  ],
+
   "change_by_coin": [
     {"coin_change": "+7.23%"},
     {"coin_change": "+2.01%"},
@@ -68,6 +91,52 @@
     {"coin_holding": "1,246 USDC ($1.00)"},
     {"coin_holding": "2.78 WBTC ($64,676.64)"},
     {"coin_holding": "453.7 XRP ($1.20)"}
+  ],
+
+  "num_holdings": [
+    {"num": "10.5"},
+    {"num": "1.8"},
+    {"num": "1.2"},
+    {"num": "102.3"},
+    {"num": "1.87"},
+    {"num": "9.32"},
+    {"num": "66.4"},
+    {"num": "20.0"},
+    {"num": "1,000"},
+    {"num": "8.9"},
+    {"num": "4.7"},
+    {"num": "34.7"},
+    {"num": "10,820"},
+    {"num": "4.2"},
+    {"num": "13.6"},
+    {"num": "304.6"},
+    {"num": "34.7"},
+    {"num": "1,246"},
+    {"num": "2.78"},
+    {"num": "453.7"}
+  ],
+
+  "coin_price": [
+    {"price": "$2.15"},
+    {"price": "$85.80"},
+    {"price": "$623.86"},
+    {"price": "$1.00"},
+    {"price": "$64,579.11"},
+    {"price": "$669.38"},
+    {"price": "$2.06"},
+    {"price": "$33.80"},
+    {"price": "$0.2604"},
+    {"price": "$4,711.58"},
+    {"price": "$269.87"},
+    {"price": "$45.98"},
+    {"price": "$0.00005352"},
+    {"price": "$228.35"},
+    {"price": "$48.64"},
+    {"price": "$1.00"},
+    {"price": "$25.19"},
+    {"price": "$1.00"},
+    {"price": "$64,676.64"},
+    {"price": "$1.20"}
   ],
 
   "coin_values": [
@@ -143,7 +212,7 @@
     {"change": "+$19.33 (+3.55%)"}
   ],
 
-  "date_aquired": [
+  "date_acquired": [
     {"date": "10/11/2010"},
     {"date": "3/2/2011"},
     {"date": "2/20/2012"},
@@ -164,6 +233,29 @@
     {"date": "5/23/2018"},
     {"date": "6/20/2018"},
     {"date": "7/4/2019"}
+  ],
+
+  "transactions": [
+    {"sample": "0.54 coins at $1.27/coin"},
+    {"sample": "1.20 coins at $2.54/coin"},
+    {"sample": "2.54 coins at $0.99/coin"},
+    {"sample": "0.14 coins at $1.54/coin"},
+    {"sample": "1.64 coins at $1.46/coin"},
+    {"sample": "0.65 coins at $3.25/coin"},
+    {"sample": "0.85 coins at $2.84/coin"},
+    {"sample": "0.13 coins at $2.50/coin"},
+    {"sample": "2.44 coins at $0.52/coin"},
+    {"sample": "1.55 coins at $0.60/coin"},
+    {"sample": "2.65 coins at $0.25/coin"},
+    {"sample": "1.15 coins at $0.13/coin"},
+    {"sample": "1.35 coins at $0.14/coin"},
+    {"sample": "0.66 coins at $0.55/coin"},
+    {"sample": "0.41 coins at $0.25/coin"},
+    {"sample": "0.43 coins at $0.84/coin"},
+    {"sample": "0.25 coins at $0.76/coin"},
+    {"sample": "0.23 coins at $1.02/coin"},
+    {"sample": "0.98 coins at $0.98/coin"},
+    {"sample": "0.13 coins at $0.50/coin"}
   ]
 }
 
