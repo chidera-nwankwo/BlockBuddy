@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Projects/Android Studio Projects/CSE3310proj/app/src/main/res/drawable/searchview_background.xml" value="0.14635416666666667" />
+        <entry key="..\:/Projects/Android Studio Projects/CSE3310proj/app/src/main/res/layout/activity_login.xml" value="0.16077898550724637" />
+        <entry key="..\:/Projects/Android Studio Projects/CSE3310proj/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
+        <entry key="..\:/Projects/Android Studio Projects/CSE3310proj/app/src/main/res/layout/activity_top_coins.xml" value="0.264" />
+        <entry key="..\:/Projects/Android Studio Projects/CSE3310proj/app/src/main/res/menu/activity_top_coins.xml" value="0.20885416666666667" />
         <entry key="..\:/Users/Chidera/AndroidStudioProjects/CSE3310proj/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2296875" />
         <entry key="..\:/Users/Chidera/AndroidStudioProjects/CSE3310proj/app/src/main/res/drawable/ic_email.xml" value="0.2296875" />
         <entry key="..\:/Users/Chidera/AndroidStudioProjects/CSE3310proj/app/src/main/res/layout/activity_login.xml" value="0.34954829742876997" />
