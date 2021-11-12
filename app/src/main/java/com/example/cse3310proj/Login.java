@@ -100,7 +100,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 else {
                     Toast.makeText(Login.this, "Failed to Login", Toast.LENGTH_SHORT).show();
                 }
-                
+
                 progressBar.setVisibility(View.GONE);
             }
         });

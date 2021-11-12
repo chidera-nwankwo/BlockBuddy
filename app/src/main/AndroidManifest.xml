@@ -24,6 +24,9 @@
             android:name=".RegisterUser"
             android:exported="true" />
         <activity
+            android:name=".OpeningPage"
+            android:exported="true"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true" >
             <intent-filter>

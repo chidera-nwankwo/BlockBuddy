@@ -10,8 +10,10 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:text="  Top Coins"
+        android:layout_height="59dp"
+        android:text="Top Coins"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="34sp"
         android:textStyle="bold" />
 
@@ -100,7 +102,7 @@
     <TextView
         android:id="@+id/textView13"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="227dp"
         android:text="  Shiba Inu (SHIB)"
         android:textSize="16sp" />
 

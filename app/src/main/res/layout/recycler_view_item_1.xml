@@ -53,7 +53,7 @@
             android:id="@+id/change_since_purchase"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@sample/change_colors"
+            android:textColor="@color/green"
             tools:text="@sample/coin_info.json/change_since_purchase/change" />
       </LinearLayout>
 
