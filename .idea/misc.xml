@@ -3,25 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Chidera/AndroidStudioProjects/CSE3310proj/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2296875" />
-        <entry key="..\:/Users/Chidera/AndroidStudioProjects/CSE3310proj/app/src/main/res/drawable/ic_email.xml" value="0.2296875" />
         <entry key="..\:/Users/Chidera/AndroidStudioProjects/CSE3310proj/app/src/main/res/layout/activity_login.xml" value="0.34954829742876997" />
         <entry key="..\:/Users/Chidera/AndroidStudioProjects/CSE3310proj/app/src/main/res/layout/activity_main.xml" value="0.1590678824721378" />
-        <entry key="..\:/Users/Chidera/AndroidStudioProjects/CSE3310proj/app/src/main/res/layout/activity_register_user.xml" value="0.33" />
-        <entry key="..\:/Users/Chidera/AndroidStudioProjects/CSE3310proj/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
-        <entry key="..\:/Users/Chidera/StudioProjects/CSE3310proj/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.22135416666666666" />
-        <entry key="..\:/Users/Chidera/StudioProjects/CSE3310proj/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22135416666666666" />
-        <entry key="..\:/Users/Chidera/StudioProjects/CSE3310proj/app/src/main/res/layout/activity_login.xml" value="0.33" />
-        <entry key="..\:/Users/Chidera/StudioProjects/CSE3310proj/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/Chidera/StudioProjects/CSE3310proj/app/src/main/res/layout/activity_opening_page.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Chidera/StudioProjects/CSE3310proj/app/src/main/res/layout/activity_register_user.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/Chidera/StudioProjects/CSE3310proj/app/src/main/res/layout/activity_register_user_firebase.xml" value="0.20520833333333333" />
-        <entry key="..\:/Users/Chidera/StudioProjects/CSE3310proj/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22135416666666666" />
-        <entry key="..\:/Users/Chidera/StudioProjects/CSE3310proj/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.22135416666666666" />
+        <entry key="..\:/Users/Chidera/AndroidStudioProjects/CSE3310proj/app/src/main/res/layout/activity_sign_up.xml" value="0.1590678824721378" />
         <entry key="..\:/Users/Emely/AndroidStudioProjects/CSE3310proj/app/src/main/res/layout/activity_login.xml" value="0.176" />
         <entry key="..\:/Users/Emely/AndroidStudioProjects/CSE3310proj/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
         <entry key="..\:/Users/nicho/StudioProjects/CSE3310proj/app/src/main/res/drawable/big_button.xml" value="0.5703125" />
-        <entry key="..\:/Users/nicho/StudioProjects/CSE3310proj/app/src/main/res/layout/activity_main.xml" value="0.67" />
+        <entry key="..\:/Users/nicho/StudioProjects/CSE3310proj/app/src/main/res/layout/activity_login.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/nicho/StudioProjects/CSE3310proj/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/nicho/StudioProjects/CSE3310proj/app/src/main/res/layout/activity_opening_page.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/nicho/StudioProjects/CSE3310proj/app/src/main/res/layout/activity_profile.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/nicho/StudioProjects/CSE3310proj/app/src/main/res/layout/activity_register_user.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/nicho/StudioProjects/CSE3310proj/app/src/main/res/layout/add_transaction.xml" value="0.5" />
+        <entry key="..\:/Users/nicho/StudioProjects/CSE3310proj/app/src/main/res/layout/remove_coin.xml" value="0.4041666666666667" />
         <entry key="..\:/Users/nicho/StudioProjects/CSE3310proj/app/src/main/res/layout/toolbar.xml" value="0.3307291666666667" />
       </map>
     </option>
