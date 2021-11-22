@@ -94,8 +94,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {
-                    //go to profile
-                    startActivity(new Intent(Login.this, Profile.class));
+                    //go to Opening Page
+                    startActivity(new Intent(Login.this, OpeningPage.class));
                 }
                 else {
                     Toast.makeText(Login.this, "Failed to Login", Toast.LENGTH_SHORT).show();
