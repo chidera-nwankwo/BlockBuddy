@@ -120,7 +120,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         android:text="@sample/coin_info.json/change_since_purchase/change[0]"
-        android:textColor="@sample/change_colors"
+        android:textColor="@color/green"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/profit_loss"

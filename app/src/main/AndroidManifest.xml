@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CSE3310proj" >
         <activity
-            android:name=".TopCoinsActivity"
-            android:exported="true" />
-        <activity
             android:name=".Profile"
             android:exported="false" />
         <activity
@@ -24,7 +21,10 @@
             android:name=".RegisterUser"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".OpeningPage"
+            android:exported="true"/>
+        <activity
+            android:name=".Top20Coin"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
