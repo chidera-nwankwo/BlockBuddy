@@ -21,6 +21,9 @@
             android:name=".Login"
             android:exported="true" />
         <activity
+            android:name=".OpeningPage"
+            android:exported="true" />
+        <activity
             android:name=".RegisterUser"
             android:exported="true" />
         <activity
