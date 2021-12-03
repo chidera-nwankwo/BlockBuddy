@@ -9,7 +9,7 @@ public class WatchlistCoin {
     private double price;
     private double holdings = 4.288;
     private double holdingsUSD = 0;
-    private double costbasis = 1621.97;
+    private double costbasis = 5000.97;
     private double change24;
     private double marketValue = holdings*price;
 

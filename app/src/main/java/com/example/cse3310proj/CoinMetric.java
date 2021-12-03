@@ -1,5 +1,6 @@
 package com.example.cse3310proj;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -34,11 +35,12 @@ public class CoinMetric extends AppCompatActivity {
             NetCost.setText("$ " + df2.format(extras.getDouble("costbasis")));
 
             double profitLoss = Double.parseDouble(df2.format(extras.getDouble("marketvalue"))) - Double.parseDouble(df2.format(extras.getDouble("costbasis")));
-            if(profitLoss<0) {ProfitLoss.setText(df2.format(profitLoss));}
-            else {ProfitLoss.setText("+$" +df2.format(profitLoss));}
+            if(profitLoss<0) {ProfitLoss.setTextColor(Color.RED); ProfitLoss.setText("$" + df2.format(profitLoss));}
+            else {ProfitLoss.setTextColor(Color.GREEN);ProfitLoss.setText("+$" +df2.format(profitLoss));}
 
             double PercentChangeD = (profitLoss / Double.parseDouble(df2.format(extras.getDouble("costbasis")))) * 100 ;
-            ProfitLossPercent.setText(df2.format(PercentChangeD) + "%");
+            if(PercentChangeD<0) {ProfitLossPercent.setTextColor(Color.RED); ProfitLossPercent.setText(df2.format(PercentChangeD) + "%");}
+            else {ProfitLossPercent.setTextColor(Color.GREEN); ProfitLossPercent.setText("+" + df2.format(PercentChangeD) + "%");}
 
         }
     }

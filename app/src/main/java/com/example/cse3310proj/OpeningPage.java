@@ -1,6 +1,7 @@
 package com.example.cse3310proj;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AbsListView;
@@ -67,8 +68,8 @@ public class OpeningPage extends AppCompatActivity implements View.OnClickListen
 
         double PortChange = ((Double.parseDouble(df2.format(PortValue)) - Double.parseDouble(df2.format(PortBasis))) / Double.parseDouble(df2.format(PortBasis)) ) *100;
         totalValue.setText("$" + df2.format(PortValue));
-        if(PortValue>=PortBasis) {percentChange.setText("+" + df2.format(PortChange) + "%");}
-        else {percentChange.setText("-" + df2.format(PortChange) + "%");}
+        if(PortValue>=PortBasis) {percentChange.setTextColor(Color.GREEN); percentChange.setText("+" + df2.format(PortChange) + "%");}
+        else {percentChange.setTextColor(Color.RED); percentChange.setText(df2.format(PortChange) + "%");}
 
 
         setOnClickListener();
