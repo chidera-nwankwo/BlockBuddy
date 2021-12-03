@@ -1,5 +1,6 @@
 package com.example.cse3310proj;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -27,7 +28,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Top20Coin extends AppCompatActivity {
+public class Top20Coin extends AppCompatActivity{
 
     // creating variable for recycler view,
     // adapter, array list, progress bar
@@ -36,6 +37,7 @@ public class Top20Coin extends AppCompatActivity {
     private ArrayList<CurrencyModal> currencyModalArrayList;
     private CurrencyRVAdapter currencyRVAdapter;
     private ProgressBar loadingPB;
+    private CurrencyRVAdapter.RecyclerViewClickListener listener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,13 +45,15 @@ public class Top20Coin extends AppCompatActivity {
         setContentView(R.layout.activity_top20coin);
         searchEdt = findViewById(R.id.idEdtCurrency);
 
+        setOnClickListener();
+
         // initializing all our variables and array list.
         loadingPB = findViewById(R.id.idPBLoading);
         currencyRV = findViewById(R.id.idRVcurrency);
         currencyModalArrayList = new ArrayList<>();
 
         // initializing our adapter class.
-        currencyRVAdapter = new CurrencyRVAdapter(currencyModalArrayList, this);
+        currencyRVAdapter = new CurrencyRVAdapter(currencyModalArrayList, this, listener);
 
         // setting layout manager to recycler view.
         currencyRV.setLayoutManager(new LinearLayoutManager(this));
@@ -80,6 +84,19 @@ public class Top20Coin extends AppCompatActivity {
                 filter(s.toString());
             }
         });
+    }
+
+    private void setOnClickListener() {
+        listener = new CurrencyRVAdapter.RecyclerViewClickListener() {
+            @Override
+            public void onClick(View v, int position) {
+                Intent intent = new Intent(getApplicationContext(), OpeningPage.class);
+                intent.putExtra("symbol",currencyModalArrayList.get(position).getSymbol());
+                intent.putExtra("price",currencyModalArrayList.get(position).getPrice());
+                intent.putExtra("name", currencyModalArrayList.get(position).getName());
+                startActivity(intent);
+            }
+        };
     }
 
     private void filter(String filter) {
@@ -130,6 +147,7 @@ public class Top20Coin extends AppCompatActivity {
                         JSONObject quote = dataObj.getJSONObject("quote");
                         JSONObject USD = quote.getJSONObject("USD");
                         double price = USD.getDouble("price");
+                        double change = USD.getDouble("percent_change_24h");
                         // adding all data to our array list.
                         currencyModalArrayList.add(new CurrencyModal(name, symbol, price));
                     }
@@ -162,4 +180,5 @@ public class Top20Coin extends AppCompatActivity {
         // json object request to our queue.
         queue.add(jsonObjectRequest);
     }
+
 }

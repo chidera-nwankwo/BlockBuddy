@@ -20,11 +20,14 @@ public class CurrencyRVAdapter extends RecyclerView.Adapter<CurrencyRVAdapter.Cu
     private static DecimalFormat df2 = new DecimalFormat("#.##");
     private ArrayList<CurrencyModal> currencyModals;
     private Context context;
+    private RecyclerViewClickListener listener;
 
-    public CurrencyRVAdapter(ArrayList<CurrencyModal> currencyModals, Context context) {
+    public CurrencyRVAdapter(ArrayList<CurrencyModal> currencyModals, Context context, RecyclerViewClickListener listener) {
         this.currencyModals = currencyModals;
+        this.listener = listener;
         this.context = context;
     }
+
 
     // below is the method to filter our list.
     public void filterList(ArrayList<CurrencyModal> filterllist) {
@@ -63,7 +66,7 @@ public class CurrencyRVAdapter extends RecyclerView.Adapter<CurrencyRVAdapter.Cu
 
     // on below line we are creating our view holder class
     // which will be used to initialize each view of our layout file.
-    public class CurrencyViewholder extends RecyclerView.ViewHolder {
+    public class CurrencyViewholder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private TextView symbolTV, rateTV, nameTV;
 
         public CurrencyViewholder(@NonNull View itemView) {
@@ -73,6 +76,18 @@ public class CurrencyRVAdapter extends RecyclerView.Adapter<CurrencyRVAdapter.Cu
             symbolTV = itemView.findViewById(R.id.idTVSymbol);
             rateTV = itemView.findViewById(R.id.idTVRate);
             nameTV = itemView.findViewById(R.id.idTVName);
+            itemView.setOnClickListener(this);
+
+        }
+
+        @Override
+        public void onClick(View v) {
+            listener.onClick(v,getAdapterPosition());
         }
     }
+
+    public interface RecyclerViewClickListener{
+        void onClick(View v, int position);
+    }
+
 }
