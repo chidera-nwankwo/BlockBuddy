@@ -68,6 +68,7 @@
 
         <!-- holdings (USD value*coin_amount)-->
         <TextView
+            android:id="@+id/MarketValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -84,6 +85,7 @@
 
         <!--holdings (literal coin amount)-->
         <TextView
+            android:id="@+id/holdings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -96,6 +98,22 @@
             android:layout_marginBottom="2dp"
             android:padding="3dp"
             android:text="456.000"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/change24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="177dp"
+            android:layout_marginRight="177dp"
+            android:layout_marginBottom="2dp"
+            android:padding="3dp"
+            android:text="123456"
             android:textColor="@color/black" />
 
     </RelativeLayout>

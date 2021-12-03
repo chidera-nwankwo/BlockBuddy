@@ -94,6 +94,7 @@ public class Top20Coin extends AppCompatActivity{
                 intent.putExtra("symbol",currencyModalArrayList.get(position).getSymbol());
                 intent.putExtra("price",currencyModalArrayList.get(position).getPrice());
                 intent.putExtra("name", currencyModalArrayList.get(position).getName());
+                intent.putExtra("change24",currencyModalArrayList.get(position).getChange24());
                 startActivity(intent);
             }
         };
@@ -149,7 +150,7 @@ public class Top20Coin extends AppCompatActivity{
                         double price = USD.getDouble("price");
                         double change = USD.getDouble("percent_change_24h");
                         // adding all data to our array list.
-                        currencyModalArrayList.add(new CurrencyModal(name, symbol, price));
+                        currencyModalArrayList.add(new CurrencyModal(name, symbol, price, change));
                     }
                     // notifying adapter on data change.
                     currencyRVAdapter.notifyDataSetChanged();
