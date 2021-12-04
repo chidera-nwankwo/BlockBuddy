@@ -32,7 +32,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CoinMetric"></activity>
+        <activity android:name=".CoinMetric">
+        </activity>
+        <activity android:name=".addRemTransaction"></activity>
+        <activity android:name=".transactionLog"></activity>
     </application>
 
 </manifest>
