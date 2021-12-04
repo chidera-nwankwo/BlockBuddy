@@ -3,6 +3,7 @@ package com.example.cse3310proj;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -27,7 +28,6 @@ public class OpeningPage extends AppCompatActivity implements View.OnClickListen
 
     private FloatingActionButton button;
     private TextView totalValue;
-    private ArrayList<WatchlistCoin> Watchlist = new ArrayList<WatchlistCoin>();
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -58,10 +58,10 @@ public class OpeningPage extends AppCompatActivity implements View.OnClickListen
             name = extras.getString("name");
             symbol = extras.getString("symbol");
             change = extras.getDouble("change24");
-            Watchlist.add(new WatchlistCoin(name,symbol,price,change));
+            Login.Watchlist.add(new WatchlistCoin(name,symbol,price,change));
         }
 
-        for(WatchlistCoin coin: Watchlist)
+        for(WatchlistCoin coin: Login.Watchlist)
         {
             PortValue += coin.getMarketValue();
             PortBasis += coin.getCostbasis();
@@ -78,7 +78,7 @@ public class OpeningPage extends AppCompatActivity implements View.OnClickListen
         mRecyclerView = findViewById(R.id.watchlistRecycler);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager=  new LinearLayoutManager(this);
-        mAdapter = new WatchlistAdapter(Watchlist,listener);
+        mAdapter = new WatchlistAdapter(Login.Watchlist,listener);
 
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setAdapter(mAdapter);
@@ -91,12 +91,12 @@ public class OpeningPage extends AppCompatActivity implements View.OnClickListen
             @Override
             public void onClick(View v, int position) {
                 Intent intent = new Intent(getApplicationContext(), CoinMetric.class);
-                intent.putExtra("name", Watchlist.get(position).getName());
-                intent.putExtra("symbol", Watchlist.get(position).getSymbol());
-                intent.putExtra("holdings",Watchlist.get(position).getHoldings());
-                intent.putExtra("price",Watchlist.get(position).getPrice());
-                intent.putExtra("marketvalue",Watchlist.get(position).getMarketValue());
-                intent.putExtra("costbasis",Watchlist.get(position).getCostbasis());
+                intent.putExtra("name", Login.Watchlist.get(position).getName());
+                intent.putExtra("symbol", Login.Watchlist.get(position).getSymbol());
+                intent.putExtra("holdings",Login.Watchlist.get(position).getHoldings());
+                intent.putExtra("price",Login.Watchlist.get(position).getPrice());
+                intent.putExtra("marketvalue",Login.Watchlist.get(position).getMarketValue());
+                intent.putExtra("costbasis",Login.Watchlist.get(position).getCostbasis());
                 startActivity(intent);
             }
         };
