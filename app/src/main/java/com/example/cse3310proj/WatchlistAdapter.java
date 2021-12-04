@@ -1,5 +1,6 @@
 package com.example.cse3310proj;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -66,6 +67,12 @@ public class WatchlistAdapter extends RecyclerView.Adapter<WatchlistAdapter.Watc
         holder.name.setText(currentItem.getName());
 
         holder.change24.setText(df2.format(currentItem.getChange24()) + "%");
+        if(currentItem.getChange24() <0) {
+            holder.change24.setTextColor(Color.RED);
+        }
+        else {
+            holder.change24.setTextColor(Color.GREEN);
+        }
 
         String mHoldings = String.valueOf(currentItem.getHoldings());
         holder.holdings.setText(mHoldings);

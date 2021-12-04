@@ -8,13 +8,13 @@ public class WatchlistCoin implements Serializable {
     private String name;
     private String symbol;
     private double price;
-    private double holdings = 4.288;
+    public double holdings = 0;
     private double holdingsUSD = 0;
-    private double costbasis = 5000.97;
+    public double costbasis = 0;
     private double change24;
     private double marketValue = holdings*price;
 
-    private ArrayList<Transaction> TransactionLog;
+    public ArrayList<Transaction> TransactionLog = new ArrayList<>();
 
     public WatchlistCoin(String name, String symbol, double price, double change24) {
         this.name = name;

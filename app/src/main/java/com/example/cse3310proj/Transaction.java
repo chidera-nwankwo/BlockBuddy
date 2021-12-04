@@ -3,13 +3,19 @@ package com.example.cse3310proj;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Transaction {
-    private String coinName;
-    private double PerCoin;
-    private double quantity;
+    private String symbol;
+    public double PerCoin;
+    public double quantity;
     private String date;
-    private int status;
+    public int status;
 
-    public Transaction(String name, double PerCoin, double quantity, String date, int status) {}
+    public Transaction(String symbol, double PerCoin, double quantity, String date, int status) {
+        this.symbol = symbol;
+        this.PerCoin = PerCoin;
+        this.quantity = quantity;
+        this.date = date;
+        this.status = status;
+    }
 
     public void addToLog() {}
     public void removeFromLog() {}
