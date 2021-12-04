@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:hint="Price per coin"
-        android:inputType="text"
+        android:inputType="numberDecimal"
         android:textSize="24sp"
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:hint="Quantity"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -75,12 +75,13 @@
         android:hint="Status: '0' for buy, '1' for sell"
         android:layout_marginTop="20dp"
         android:textSize="24sp"
+        android:inputType="number"
         app:layout_constraintTop_toBottomOf="@id/Date"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
     <Button
-        android:id="@+id/registerUser"
+        android:id="@+id/Save"
         android:layout_width="380dp"
         android:layout_height="70dp"
         android:layout_marginBottom="28dp"

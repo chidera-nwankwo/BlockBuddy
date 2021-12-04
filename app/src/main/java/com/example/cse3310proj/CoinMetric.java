@@ -66,13 +66,21 @@ public class CoinMetric extends AppCompatActivity implements View.OnClickListene
                 startActivity(new Intent(this, transactionLog.class));
                 break;
             case R.id.AddTransaction:
-                startActivity(new Intent(this, addRemTransaction.class));
+                addTransaction();
                 break;
             case R.id.removeFromList:
                 deleteCoin();
                 startActivity(new Intent(this, OpeningPage.class));
                 break;
         }
+    }
+
+    private void addTransaction() {
+        Bundle extras = getIntent().getExtras();
+        String symbol = extras.getString("symbol");
+        Intent intent2 = new Intent(getApplicationContext(), addRemTransaction.class);
+        intent2.putExtra("symbol",symbol);
+        startActivity(intent2);
     }
 
     private void deleteCoin() {
