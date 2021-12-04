@@ -3,22 +3,26 @@ package com.example.cse3310proj;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.AbsListView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
-import org.w3c.dom.Text;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-public class OpeningPage extends AppCompatActivity implements View.OnClickListener {
+public class OpeningPage extends AppCompatActivity implements View.OnClickListener, PopupMenu.OnMenuItemClickListener {
     private static DecimalFormat df2 = new DecimalFormat("#.##");
 
     private FloatingActionButton button;
@@ -28,7 +32,6 @@ public class OpeningPage extends AppCompatActivity implements View.OnClickListen
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private WatchlistAdapter.RecyclerViewClickListener listener;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +43,6 @@ public class OpeningPage extends AppCompatActivity implements View.OnClickListen
 
         TextView totalValue = (TextView) findViewById(R.id.total_value);
         TextView percentChange = (TextView) findViewById(R.id.percent_change);
-
 
         double price;
         double change;
@@ -109,4 +111,34 @@ public class OpeningPage extends AppCompatActivity implements View.OnClickListen
                 break;
         }
     }
+
+    public void showSettings(View v1){
+        PopupMenu popup = new PopupMenu(this, v1);
+        popup.setOnMenuItemClickListener(this);
+        popup.inflate(R.menu.popup_menu);
+        popup.show();
+    }
+
+    @Override
+    public boolean onMenuItemClick(MenuItem menuItem) {
+        switch(menuItem.getItemId()){
+            case R.id.logout:
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(OpeningPage.this, Login.class));
+                Toast.makeText(this,"Logout Successfully", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.changePassword:
+                
+                Toast.makeText(this,"Change Password Successfully", Toast.LENGTH_SHORT).show();
+                return true;
+            default:
+                return false;
+        }
+    }
+
+    private void passwordResetDialog(EditText resetPassword) {
+
+    }
+
 }
+

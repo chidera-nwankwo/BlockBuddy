@@ -170,4 +170,19 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/settings_button"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:backgroundTint="@color/white"
+        android:drawableTop="@drawable/ic_baseline_settings_24"
+        android:onClick="showSettings"
+        app:layout_constraintBottom_toTopOf="@+id/Holdings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.111"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
