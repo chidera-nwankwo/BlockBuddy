@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.DecimalFormat;
+import java.util.Iterator;
 
 public class CoinMetric extends AppCompatActivity implements View.OnClickListener {
     private static DecimalFormat df2 = new DecimalFormat("#.##");
@@ -23,6 +24,8 @@ public class CoinMetric extends AppCompatActivity implements View.OnClickListene
         transactionLog.setOnClickListener(this);
         Button AddTransaction = (Button) findViewById(R.id.AddTransaction);
         AddTransaction.setOnClickListener(this);
+        Button Unwatch = (Button) findViewById(R.id.removeFromList);
+        Unwatch.setOnClickListener(this);
 
         TextView coinTitle = findViewById(R.id.coinTitle);
         TextView MarketValue = findViewById(R.id.MarketValue);
@@ -33,6 +36,7 @@ public class CoinMetric extends AppCompatActivity implements View.OnClickListene
         TextView ProfitLossPercent = findViewById(R.id.PercentageChange);
         TextView Price = findViewById(R.id.Price);
 
+
         Bundle extras = getIntent().getExtras();
         if(extras!=null) {
             coinTitle.setText(extras.getString("name"));
@@ -41,6 +45,7 @@ public class CoinMetric extends AppCompatActivity implements View.OnClickListene
             MarketValue.setText("$ " + df2.format(extras.getDouble("marketvalue")));
             Holdings.setText(df2.format(extras.getDouble("holdings")) + " " + extras.getString("symbol"));
             NetCost.setText("$ " + df2.format(extras.getDouble("costbasis")));
+            String symbol = extras.getString("symbol");
 
             double profitLoss = Double.parseDouble(df2.format(extras.getDouble("marketvalue"))) - Double.parseDouble(df2.format(extras.getDouble("costbasis")));
             if(profitLoss<0) {ProfitLoss.setTextColor(Color.RED); ProfitLoss.setText("$" + df2.format(profitLoss));}
@@ -49,6 +54,7 @@ public class CoinMetric extends AppCompatActivity implements View.OnClickListene
             double PercentChangeD = (profitLoss / Double.parseDouble(df2.format(extras.getDouble("costbasis")))) * 100 ;
             if(PercentChangeD<0) {ProfitLossPercent.setTextColor(Color.RED); ProfitLossPercent.setText(df2.format(PercentChangeD) + "%");}
             else {ProfitLossPercent.setTextColor(Color.GREEN); ProfitLossPercent.setText("+" + df2.format(PercentChangeD) + "%");}
+
 
         }
     }
@@ -62,6 +68,24 @@ public class CoinMetric extends AppCompatActivity implements View.OnClickListene
             case R.id.AddTransaction:
                 startActivity(new Intent(this, addRemTransaction.class));
                 break;
+            case R.id.removeFromList:
+                deleteCoin();
+                startActivity(new Intent(this, OpeningPage.class));
+                break;
         }
     }
+
+    private void deleteCoin() {
+        Bundle extras = getIntent().getExtras();
+        String symbol = extras.getString("symbol");
+        for (Iterator<WatchlistCoin> iterator = Login.Watchlist.iterator(); iterator.hasNext(); ) {
+            WatchlistCoin coin = iterator.next();
+            if(coin.getSymbol().equalsIgnoreCase(symbol)) {
+                iterator.remove();
+                startActivity(new Intent(this, OpeningPage.class));
+            }
+        }
+    }
+
+
 }

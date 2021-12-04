@@ -1,8 +1,9 @@
 package com.example.cse3310proj;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class WatchlistCoin {
+public class WatchlistCoin implements Serializable {
 
     private String name;
     private String symbol;
