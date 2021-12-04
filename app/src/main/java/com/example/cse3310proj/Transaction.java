@@ -1,5 +1,7 @@
 package com.example.cse3310proj;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class Transaction {
     private String coinName;
     private double PerCoin;
