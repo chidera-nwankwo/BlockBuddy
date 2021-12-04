@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:text="$653.67K"
         android:textColor="#000000"
-        android:textSize="70sp"
+        android:textSize="45sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,8 +57,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+11.2%"
-        android:textColor="#44CD4A"
-        android:textSize="34sp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,7 +69,7 @@
         android:id="@+id/change_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="24hr Change"
+        android:text="All Time Change"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,15 +90,45 @@
         app:layout_constraintTop_toBottomOf="@+id/change_title" />
 
     <TextView
-        android:id="@+id/cost_basis_title"
+        android:id="@+id/Coin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
-        android:text="Current Holdings"
+        android:text="Coin"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <TextView
+        android:id="@+id/Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="Price"
+        android:layout_marginRight="50dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+
+    <TextView
+        android:id="@+id/Holdings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="4dp"
+        android:text="Holdings"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.804"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -127,9 +157,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cost_basis_title">
+        app:layout_constraintTop_toBottomOf="@id/Coin">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/watchlistRecycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:itemCount="20"
