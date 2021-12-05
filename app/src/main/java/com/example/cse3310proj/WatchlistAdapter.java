@@ -82,6 +82,7 @@ public class WatchlistAdapter extends RecyclerView.Adapter<WatchlistAdapter.Watc
         holder.mPrice.setText("$ " + df2.format(currentItem.getPrice()));
 
         holder.MarketValue.setText("$ " + df2.format(currentItem.getMarketValue()));
+
     }
 
     @Override
