@@ -59,6 +59,10 @@ public class WatchlistCoin implements Serializable {
         return costbasis;
     }
 
+    public void setChange24(double change24) {
+        this.change24 = change24;
+    }
+
     public double getMarketValue() {
         this.marketValue=this.holdings*this.price;
         return marketValue;
