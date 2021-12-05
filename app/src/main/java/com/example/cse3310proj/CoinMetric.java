@@ -63,7 +63,7 @@ public class CoinMetric extends AppCompatActivity implements View.OnClickListene
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.TransactionLog:
-                startActivity(new Intent(this, transactionLog.class));
+                viewLog();
                 break;
             case R.id.AddTransaction:
                 addTransaction();
@@ -73,6 +73,14 @@ public class CoinMetric extends AppCompatActivity implements View.OnClickListene
                 startActivity(new Intent(this, OpeningPage.class));
                 break;
         }
+    }
+
+    private void viewLog() {
+        Bundle extras = getIntent().getExtras();
+        String symbol = extras.getString("symbol");
+        Intent intent2 = new Intent(getApplicationContext(), transactionLog.class);
+        intent2.putExtra("symbol",symbol);
+        startActivity(intent2);
     }
 
     private void addTransaction() {

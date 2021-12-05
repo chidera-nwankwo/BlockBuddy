@@ -3,13 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Projects/Android Studio Projects/CSE3310projV4/app/src/main/res/layout/activity_login.xml" value="0.13020833333333334" />
-        <entry key="..\:/Projects/Android Studio Projects/CSE3310projV4/app/src/main/res/layout/activity_opening_page.xml" value="0.264" />
-        <entry key="..\:/Projects/Android Studio Projects/CSE3310projV4/app/src/main/res/layout/settings.xml" value="0.13020833333333334" />
-        <entry key="..\:/Projects/Android Studio Projects/CSE3310projV4/app/src/main/res/menu/popup_menu.xml" value="0.13020833333333334" />
-        <entry key="..\:/Projects/Android Studio Projects/CSE3310projV4/app/src/main/res/menu/settings_menu.xml" value="0.264" />
-        <entry key="..\:/Projects/Android Studio Projects/CSE3310projV4/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.14635416666666667" />
-        <entry key="..\:/Projects/Android Studio Projects/CSE3310projV4/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.14635416666666667" />
         <entry key="..\:/Users/Chidera/AndroidStudioProjects/CSE3310proj/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2296875" />
         <entry key="..\:/Users/Chidera/AndroidStudioProjects/CSE3310proj/app/src/main/res/drawable/ic_email.xml" value="0.2296875" />
         <entry key="..\:/Users/Chidera/AndroidStudioProjects/CSE3310proj/app/src/main/res/layout/activity_login.xml" value="0.34954829742876997" />
@@ -37,6 +30,7 @@
         <entry key="..\:/Users/Chidera/StudioProjects/CSE3310proj/app/src/main/res/layout/recycler_view_item.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Chidera/StudioProjects/CSE3310proj/app/src/main/res/layout/recycler_view_item_1.xml" value="0.33" />
         <entry key="..\:/Users/Chidera/StudioProjects/CSE3310proj/app/src/main/res/layout/recycler_view_item_2.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/Chidera/StudioProjects/CSE3310proj/app/src/main/res/layout/recycler_view_item_transaction.xml" value="0.5" />
         <entry key="..\:/Users/Chidera/StudioProjects/CSE3310proj/app/src/main/res/layout/recycler_view_item_watchlist.xml" value="0.5" />
         <entry key="..\:/Users/Chidera/StudioProjects/CSE3310proj/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/Chidera/StudioProjects/CSE3310proj/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.22135416666666666" />
