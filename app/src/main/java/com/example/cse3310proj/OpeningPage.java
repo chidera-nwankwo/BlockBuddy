@@ -125,6 +125,7 @@ public class OpeningPage extends AppCompatActivity implements View.OnClickListen
                                 JSONObject USD = quote.getJSONObject("USD");
                                 double price = USD.getDouble("price");
                                 double change = USD.getDouble("percent_change_24h");
+                                
 
 
 
