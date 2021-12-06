@@ -83,7 +83,12 @@ public class OpeningPage extends AppCompatActivity implements View.OnClickListen
 
         }
 
-        double PortChange = ((Double.parseDouble(df2.format(PortValue)) - Double.parseDouble(df2.format(PortBasis))) / Double.parseDouble(df2.format(PortBasis)) ) *100;
+        double PortChange;
+        if (PortBasis > 0) {
+            PortChange = ((Double.parseDouble(df2.format(PortValue)) - Double.parseDouble(df2.format(PortBasis))) / Double.parseDouble(df2.format(PortBasis)) ) *100;
+        } else {
+            PortChange = 0;
+        }
         totalValue.setText("$" + df2.format(PortValue));
         if(PortValue>=PortBasis) {percentChange.setTextColor(Color.GREEN); percentChange.setText("+" + df2.format(PortChange) + "%");}
         else {percentChange.setTextColor(Color.RED); percentChange.setText(df2.format(PortChange) + "%");}

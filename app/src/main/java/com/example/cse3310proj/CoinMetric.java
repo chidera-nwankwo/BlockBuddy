@@ -51,7 +51,12 @@ public class CoinMetric extends AppCompatActivity implements View.OnClickListene
             if(profitLoss<0) {ProfitLoss.setTextColor(Color.RED); ProfitLoss.setText("$" + df2.format(profitLoss));}
             else {ProfitLoss.setTextColor(Color.GREEN);ProfitLoss.setText("+$" +df2.format(profitLoss));}
 
-            double PercentChangeD = (profitLoss / Double.parseDouble(df2.format(extras.getDouble("costbasis")))) * 100 ;
+            double PercentChangeD;
+            if (extras.getDouble("costbasis") > 0) {
+                PercentChangeD = (profitLoss / Double.parseDouble(df2.format(extras.getDouble("costbasis")))) * 100;
+            } else {
+                PercentChangeD = 0;
+            }
             if(PercentChangeD<0) {ProfitLossPercent.setTextColor(Color.RED); ProfitLossPercent.setText(df2.format(PercentChangeD) + "%");}
             else {ProfitLossPercent.setTextColor(Color.GREEN); ProfitLossPercent.setText("+" + df2.format(PercentChangeD) + "%");}
 
