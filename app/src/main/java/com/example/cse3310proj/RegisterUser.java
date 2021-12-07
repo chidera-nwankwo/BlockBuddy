@@ -51,7 +51,6 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.registerUser:
                 RegisterUser();
-                startActivity(new Intent(this, Login.class));
                 break;
         }
     }
@@ -115,8 +114,9 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
                                     if(task.isSuccessful()) {
                                         Toast.makeText(RegisterUser.this, "User successfully registered.", Toast.LENGTH_LONG).show();
                                         progressBar.setVisibility(View.GONE);
-
                                         // redirect to login
+                                        Intent intent = new Intent(getApplicationContext(),Login.class);
+                                        startActivity(intent);
                                     }
                                     else {
                                         Toast.makeText(RegisterUser.this, "Failed to register.", Toast.LENGTH_LONG).show();

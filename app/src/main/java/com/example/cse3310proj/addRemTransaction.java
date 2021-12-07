@@ -51,7 +51,8 @@ public class addRemTransaction extends AppCompatActivity implements View.OnClick
         double PerCoinD = Double.parseDouble(PerCoin.getText().toString().trim());
         double QuantityD = Double.parseDouble(Quantity.getText().toString().trim());
 
-        Transaction tx = new Transaction(symbol,PerCoinD, QuantityD, Date.getText().toString(), Integer.parseInt(Status.getText().toString()));
+        Transaction tx = new Transaction(symbol,PerCoinD, QuantityD,
+                Date.getText().toString(), Integer.parseInt(Status.getText().toString()));
         for (Iterator<WatchlistCoin> iterator = Login.Watchlist.iterator(); iterator.hasNext(); ) {
             WatchlistCoin coin = iterator.next();
             if(coin.getSymbol().equalsIgnoreCase(symbol)) {
